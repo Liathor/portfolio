@@ -3,6 +3,33 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #f3f6f7;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: flex-start; /* Ensure items align to the left */
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px; /* Max width to keep the content from stretching too wide */
+  margin: 0 auto; /* Center the content horizontally, but keep it aligned to the top */
+  height: 100%; /* Ensure it takes full height */
+  box-sizing: border-box;
+  display: block; 
 }
 
 .logo {
@@ -33,10 +60,125 @@
   }
 }
 
-.card {
-  padding: 2em;
+/* Header CSS */
+.header {
+  background-image: url(https://images.unsplash.com/photo-1690585703267-de31ea667ef0?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: 100% auto;
+  color: #f7f7f7;
+  text-align: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  font-family: 'Lucida Console';
 }
 
-.read-the-docs {
-  color: #888;
+.nav-link {
+  color: white;
+  background-color: #61dafbaa;
 }
+
+/* Page CSS */
+
+.aboutPhoto {
+  width: 30%;
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+}
+
+/* Contact form CSS */
+
+.contact-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: rgb(62, 50, 172);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
+
+/* Responsive Design for Form*/
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 15px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+/* Footer CSS */
+
+.footer {
+  background-color: #7a7a7eaa;
+  flex: auto;
+}
+
+.footerLink {
+  max-width: 10%;
+  padding: 1em;
+}
+

@@ -1,6 +1,6 @@
 export default function Resume() {
     return (
-      <div>
+      <div className="content">
         <h2>Resume</h2>
           <h3>Download PDF</h3>
             <a href="https://drive.google.com/uc?export=download&id=1HMgyMQ2uvHt9WmrYR54cobgKgZ162OF_" download>

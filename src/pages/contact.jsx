@@ -59,7 +59,7 @@ export default function Contact() {
     };
   
     return (
-      <div className="container text-center">
+      <div className="content contact-form">
         <h2>
           Contact
         </h2>
@@ -69,7 +69,7 @@ export default function Contact() {
             name="contactName"
             onChange={handleInputChange}
             type="text"
-            placeholder="contactName"
+            placeholder="Name"
             onBlur={checkErrors}
           />
           <input
@@ -77,7 +77,7 @@ export default function Contact() {
             name="email"
             onChange={handleInputChange}
             type="text"
-            placeholder="email"
+            placeholder="Email"
             onBlur={checkErrors}
           />
           <input
@@ -85,7 +85,7 @@ export default function Contact() {
             name="message"
             onChange={handleInputChange}
             type="text"
-            placeholder="message"
+            placeholder="Message"
             onBlur={checkErrors}
           />
           <button type="submit">
