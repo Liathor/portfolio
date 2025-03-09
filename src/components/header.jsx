@@ -1,10 +1,10 @@
 import Navigation from './navigation';
 
-export default function header() {
+export default function Header() {
     return (
-      <div>
+      <header>
         <h1>Misha Dyer</h1>
         <Navigation />
-      </div>
+      </header>
     );
   }

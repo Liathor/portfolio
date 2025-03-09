@@ -1,15 +1,12 @@
 export default function About() {
     return (
       <div>
-        <h1>About Me</h1>
-        <p>
-          Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-          Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-          mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-          lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-          imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-          in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-        </p>
+        <h2>About Me</h2>
+        <p>My name is Misha Dyer, I'm new to coding, but very eager to learn and apply my skills. I'm from a book publishing background, wherein I work with data management of book products as well as ebook production. I have experience with XML, HTML and CSS as a result of my background in publishing. The EDX bootcamp is giving me a greater understanding of HTML and CSS, and has also introduced me to Javascript.</p>
+        <p>In my free time I enjoy hiking, reading gaming and escape rooms. Please reach out to me if you have any questions. I'm happy to answer and chat.</p>
+        <div>
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQFmhXcnVmWrIQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732141701110?e=1747267200&v=beta&t=1QOZcUi2vrh_JLJr_EW6yg55Rkok12ZYn_bxH8nmLL0" alt="a photograph of myself on a hiking trail"/>
+        </div>
       </div>
     );
   }

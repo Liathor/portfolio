@@ -1,72 +1,102 @@
 import { useState } from 'react';
+import { validateEmail } from '../utils/helpers';
 
-export default function contact() {
-    return (
-      <div>
-        <h1>Contact Me</h1>
-        <p>
-          Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-          Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-          mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-          lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-          imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-          in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-        </p>
-      </div>
-    );
-  }
+export default function Contact() {
+    const [contactName, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
-
-
-
-  /*
-  function Form() {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-
-  
     const handleInputChange = (e) => {
-      // Getting the value and name of the input which triggered the change
-      const { name, value } = e.target;
-  
-      // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
-      return name === 'firstName' ? setFirstName(value) : setLastName(value);
-    };
+        const { target } = e;
+        const inputType = target.name;
+        const inputValue = target.value;
+    
+        if (inputType === 'contactName') {
+            setName(inputValue);
+        } else if (inputType === 'email') {
+            setEmail(inputValue);
+        } else {
+            setMessage(inputValue);
+        }
+      };
+    
+    const checkErrors = (e) => {
+        console.log("onBlur triggered for:", e.target.name);
+        const { name } = e.target;
+        if (name === "contactName" && !contactName.trim()) {
+            setErrorMessage('Please enter your name');
+        }
+        else if (name === "email" && !validateEmail(email)) {
+            setErrorMessage('Please enter a valid email');
+        }
+        else if (name === "message" && !message.trim()) {
+            setErrorMessage('Please enter a message');
+        }
+        else {
+            setErrorMessage("");
+        }
+    }
   
     const handleFormSubmit = (e) => {
-      // Preventing the default behavior of the form submit (which is to refresh the page)
       e.preventDefault();
-  
-      // Alert the user their first and last name, clear the inputs
-      alert(`Hello ${firstName} ${lastName}`);
-      setFirstName('');
-      setLastName('');
+      if (!setName) {
+        setErrorMessage('Please enter your name');
+        return;
+      }
+      if (!validateEmail(email)) {
+        setErrorMessage('Please enter a valid email');
+        return;
+      }
+      if (!setMessage) {
+        setErrorMessage('Please enter a message.')
+        return;
+      }
+      alert(`Thank you for reaching out ${contactName}. I'll reach out to you as soon as I am able.`);
+      setName('');
+      setEmail('');
+      setMessage('');
     };
   
     return (
       <div className="container text-center">
-        <h1>
-          Hello {firstName} {lastName}
-        </h1>
+        <h2>
+          Contact
+        </h2>
         <form className="form" onSubmit={handleFormSubmit}>
           <input
-            value={firstName}
-            name="firstName"
+            value={contactName}
+            name="contactName"
             onChange={handleInputChange}
             type="text"
-            placeholder="First Name"
+            placeholder="contactName"
+            onBlur={checkErrors}
           />
           <input
-            value={lastName}
-            name="lastName"
+            value={email}
+            name="email"
             onChange={handleInputChange}
             type="text"
-            placeholder="Last Name"
+            placeholder="email"
+            onBlur={checkErrors}
+          />
+          <input
+            value={message}
+            name="message"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="message"
+            onBlur={checkErrors}
           />
           <button type="submit">
             Submit
           </button>
         </form>
+        {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
       </div>
     );
-  }*/
+  }
