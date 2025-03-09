@@ -3,7 +3,7 @@ export default function Resume() {
       <div>
         <h2>Resume</h2>
           <h3>Download PDF</h3>
-            <a href="http://localhost:5000/files/sample.pdf" download>
+            <a href="https://drive.google.com/uc?export=download&id=1HMgyMQ2uvHt9WmrYR54cobgKgZ162OF_" download>
               <button>Download PDF</button>
             </a>
           <h3>Front-end Proficiences</h3>
