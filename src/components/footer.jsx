@@ -8,7 +8,7 @@ export default function Footer() {
             <a data-mdb-ripple-init="" className="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/misha.dyer" role="button" data-mdb-ripple-color="dark"><i className="fa fa-facebook"></i></a>
           </section>
         </div>
-        <div className="text-center text-dark p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}> © 2025 Copyright: Misha Dyer</div>
+        <div className="text-center text-dark p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}> Created by: Misha Dyer</div>
       </footer>
     );
   }
