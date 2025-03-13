@@ -40,17 +40,17 @@ export default function Contact() {
   
     const handleFormSubmit = (e) => {
       e.preventDefault();
-      if (!setName) {
-        setErrorMessage('Please enter your name');
-        return;
+      if (!contactName.trim()) {
+          setErrorMessage('Please enter your name');
+          return;
       }
       if (!validateEmail(email)) {
-        setErrorMessage('Please enter a valid email');
-        return;
+          setErrorMessage('Please enter a valid email');
+          return;
       }
-      if (!setMessage) {
-        setErrorMessage('Please enter a message.')
-        return;
+      if (!message.trim()) {
+          setErrorMessage('Please enter a message');
+          return;
       }
       alert(`Thank you for reaching out ${contactName}. I'll reach out to you as soon as I am able.`);
       setName('');
@@ -59,12 +59,12 @@ export default function Contact() {
     };
   
     return (
-      <div className="content contact-form">
-        <h2>
-          Contact
-        </h2>
+      <div className="container px-2">
+        <h1 className="display-4">Contact Me</h1>
         <form className="form" onSubmit={handleFormSubmit}>
-          <input
+          <div className="form-group">
+            <input
+            className="form-control"
             value={contactName}
             name="contactName"
             onChange={handleInputChange}
@@ -72,23 +72,29 @@ export default function Contact() {
             placeholder="Name"
             onBlur={checkErrors}
           />
+          </div>
+          <div className="form-group">
           <input
+            className="form-control"
             value={email}
             name="email"
             onChange={handleInputChange}
             type="text"
             placeholder="Email"
             onBlur={checkErrors}
-          />
-          <input
+          /></div>
+          <div className="form-group">
+          <textarea 
+            className="form-control"
             value={message}
             name="message"
             onChange={handleInputChange}
             type="text"
             placeholder="Message"
             onBlur={checkErrors}
-          />
-          <button type="submit">
+            rows="3"
+          /></div>
+          <button type="submit" className="btn btn-primary m-2">
             Submit
           </button>
         </form>

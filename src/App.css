@@ -1,3 +1,4 @@
+/*
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -21,13 +22,13 @@ main {
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align content to the top */
-  align-items: flex-start; /* Ensure items align to the left */
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 20px;
   width: 100%;
-  max-width: 1200px; /* Max width to keep the content from stretching too wide */
-  margin: 0 auto; /* Center the content horizontally, but keep it aligned to the top */
-  height: 100%; /* Ensure it takes full height */
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
   box-sizing: border-box;
   display: block; 
 }
@@ -59,8 +60,10 @@ main {
     animation: logo-spin infinite 20s linear;
   }
 }
+*/
 
 /* Header CSS */
+/*
 .header {
   background-image: url(https://images.unsplash.com/photo-1690585703267-de31ea667ef0?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-size: 100% auto;
@@ -75,17 +78,17 @@ main {
   color: white;
   background-color: #61dafbaa;
 }
-
+*/
 /* Page CSS */
-
+/*
 .aboutPhoto {
   width: 30%;
   border-radius: 10px;
   margin-bottom: 0.5em;
 }
-
+*/
 /* Contact form CSS */
-
+/*
 .contact-form {
   background-color: #ffffff;
   padding: 20px;
@@ -150,8 +153,9 @@ button:hover {
 button:active {
   background-color: #3e8e41;
 }
-
+*/
 /* Responsive Design for Form*/
+/*
 @media (max-width: 600px) {
   .contact-form {
     padding: 15px;
@@ -169,9 +173,9 @@ button:active {
     font-size: 14px;
   }
 }
-
+*/
 /* Footer CSS */
-
+/*
 .footer {
   background-color: #7a7a7eaa;
   flex: auto;
@@ -182,3 +186,4 @@ button:active {
   padding: 1em;
 }
 
+*/

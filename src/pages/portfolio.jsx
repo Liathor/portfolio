@@ -45,9 +45,13 @@ const cards = [
 
 function Portfolio() {
   return (
-    <div className="content portfolio">
-        <h2>Portfolio</h2>
-        <Project cards={cards} />
+    <div className="container px-2">
+        <h1 className="display-4">Portfolio</h1>
+        <div className="album py-5 bg-light">
+          <div className="container">
+            <Project cards={cards} />
+          </div>
+        </div>
     </div>
     );
 }
