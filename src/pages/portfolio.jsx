@@ -37,7 +37,7 @@ const cards = [
     id: 5,
     name: "Portfolio",
     repo: "https://github.com/Liathor/portfolio",
-    deployed: "https://en.wikipedia.org/wiki/HTTP_404",
+    deployed: "https://mishadyer-portfolio.netlify.app/",
     image: "https://images.unsplash.com/photo-1487088678257-3a541e6e3922?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     codes: ['JavaScript', 'CSS', 'HTML', 'React']
   },
